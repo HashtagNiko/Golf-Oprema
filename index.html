@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golf Training — trener za puttovanje | Sport Point</title>
+<meta name="description" content="Vežbajte put kod kuće. Golf Training trener za puttovanje — kompaktan set za preciznu vežbu na svakom podu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">GO</span>
+      <span><b>Golf Oprema</b><span class="sub-brand">Sport Point</span></span>
+    </a>
+    <nav id="nav">
+      <a href="index.html" class="current" data-sr="Početna" data-en="Home">Početna</a>
+      <a href="proizvod.html" data-sr="Proizvod" data-en="Product">Proizvod</a>
+      <a href="o-nama.html" data-sr="O nama" data-en="About">O nama</a>
+    </nav>
+    <div class="head-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="sr" class="active" onclick="setLang('sr')">SR</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-sr="Trener za puttovanje" data-en="Putting trainer">Trener za puttovanje</span>
+      <h1 data-sr='Vežbajte <em>put</em> u svojoj dnevnoj sobi' data-en='Practice your <em>putt</em> in your living room'></h1>
+      <p data-sr="Golf Training je kompaktan set za vežbu puttovanja &mdash; meta sa ležištem za lopticu i podloga koja staje na svaki pod. Idealno za kuću, kancelariju ili klub." data-en="Golf Training is a compact putting practice set &mdash; a target with a ball seat and a mat that fits any floor. Ideal for home, office or club."></p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="proizvod.html" data-sr="Pogledaj proizvod" data-en="View the product"></a>
+        <a class="btn wa" data-order="wa" target="_blank" rel="noopener" data-sr="Poruči preko WhatsApp-a" data-en="Order via WhatsApp"></a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="slike/u-akciji.jpg" alt="Golf Training trener u upotrebi">
+      <span class="badge" data-sr="U upotrebi kod kuće" data-en="In use at home"></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-sr="Zašto Golf Training?" data-en="Why Golf Training?"></h2>
+      <p data-sr="Jednostavna vežba koja gradi osećaj za udaljenost i preciznost &mdash; svakog dana, bez odlaska na teren." data-en="Simple practice that builds touch and accuracy &mdash; every day, without going to the course."></p>
+    </div>
+    <div class="features">
+      <div class="feat">
+        <div class="ico">🏠</div>
+        <h3 data-sr="Vežba kod kuće" data-en="Practice at home"></h3>
+        <p data-sr="Postavite metu na kraj podloge i puttujte u svojoj sobi. Bez termina, bez čekanja." data-en="Place the target at the end of the mat and putt in your own room. No bookings, no waiting."></p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎯</div>
+        <h3 data-sr="Pravi osećaj" data-en="Real feel"></h3>
+        <p data-sr="Meta sa ležištem za lopticu daje jasan cilj i trenutnu povratnu informaciju o svakom udarcu." data-en="A target with a ball seat gives a clear goal and instant feedback on every stroke."></p>
+      </div>
+      <div class="feat">
+        <div class="ico">📦</div>
+        <h3 data-sr="Kompaktno" data-en="Compact"></h3>
+        <p data-sr="Lako se sklapa i nosi. Podloga se smota, meta stane u svaku torbu." data-en="Folds and carries easily. The mat rolls up and the target fits any bag."></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band">
+      <div class="txt">
+        <h2 data-sr="Spremno za igru, odmah iz kutije" data-en="Ready to play, straight out of the box"></h2>
+        <p data-sr="Podloga, meta i loptice &mdash; sve što vam treba da počnete da vežbate čim raspakujete set." data-en="Mat, target and balls &mdash; everything you need to start practising the moment you unpack the set."></p>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="proizvod.html" data-sr="Detalji o setu" data-en="Set details"></a>
+      </div>
+      <img src="slike/set.jpg" alt="Golf Training set">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span id="year"></span> Golf Oprema &middot; Sport Point</span>
+    <a href="o-nama.html" data-sr="Kontakt" data-en="Contact"></a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

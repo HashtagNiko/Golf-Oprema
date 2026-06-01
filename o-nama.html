@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O nama i kontakt | Sport Point</title>
+<meta name="description" content="Sport Point — oprema za golf. Kontaktirajte nas putem WhatsApp-a, e-pošte ili telefona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">GO</span>
+      <span><b>Golf Oprema</b><span class="sub-brand">Sport Point</span></span>
+    </a>
+    <nav id="nav">
+      <a href="index.html" data-sr="Početna" data-en="Home">Početna</a>
+      <a href="proizvod.html" data-sr="Proizvod" data-en="Product">Proizvod</a>
+      <a href="o-nama.html" class="current" data-sr="O nama" data-en="About">O nama</a>
+    </nav>
+    <div class="head-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="sr" class="active" onclick="setLang('sr')">SR</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap about">
+    <span class="eyebrow" data-sr="O nama" data-en="About us">O nama</span>
+    <h1 data-sr="Sport Point &mdash; oprema za golf" data-en="Sport Point &mdash; golf equipment"></h1>
+    <p data-sr="Sport Point se bavi opremom za golf i pomagalima za trening. Verujemo da napredak dolazi iz redovne vežbe &mdash; zato nudimo jednostavna, kvalitetna rešenja koja golf donose u vaš dom." data-en="Sport Point specialises in golf equipment and training aids. We believe progress comes from regular practice &mdash; that's why we offer simple, quality solutions that bring golf into your home."></p>
+    <p data-sr="Za cenu, dostupnost ili pitanja o proizvodu, javite nam se &mdash; odgovaramo brzo." data-en="For price, availability or any questions about the product, get in touch &mdash; we reply fast."></p>
+
+    <div class="contact-card">
+      <div>
+        <h2 data-sr="Kontakt" data-en="Get in touch"></h2>
+        <p class="ct-intro" data-sr="Najbrže preko WhatsApp-a. Možete i e-poštom ili telefonom." data-en="Fastest via WhatsApp. Email or phone work too."></p>
+      </div>
+      <div class="contact-list">
+        <a data-order="wa" target="_blank" rel="noopener">
+          <span class="ico">💬</span>
+          <span><small>WhatsApp</small>+381 64 328 8274</span>
+        </a>
+        <a href="mailto:sportpoint@live.de">
+          <span class="ico">✉️</span>
+          <span><small>Email</small>sportpoint@live.de</span>
+        </a>
+        <a href="tel:+381643288274">
+          <span class="ico">📞</span>
+          <span><small data-sr="Telefon" data-en="Phone">Telefon</small>+381 64 328 8274</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span id="year"></span> Golf Oprema &middot; Sport Point</span>
+    <a href="proizvod.html" data-sr="Proizvod" data-en="Product"></a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
