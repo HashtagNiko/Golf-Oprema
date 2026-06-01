@@ -3,4 +3,4 @@
     * USPs des Artikels
     * Set-Beschreibung
     * Whatsapp Nachricht anpassen
-    * 
+    * Header optimieren (immer noch abgeschnitten von einem beigen Balken)
