@@ -32,13 +32,16 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("open"); 
 function swapMain(src, el){
   const main=document.getElementById("mainImg");
   const vid=document.getElementById("mainVid");
+  const stage=main && main.parentElement;
   const isVideo=/\.(mp4|webm|mov)$/i.test(src);
   if(isVideo){
     if(vid){ vid.src=src; vid.style.display="block"; vid.play().catch(()=>{}); }
     if(main) main.style.display="none";
+    if(stage) stage.classList.add("playing-video");
   }else{
     if(main){ main.src=src; main.style.display="block"; }
     if(vid){ vid.pause(); vid.removeAttribute("src"); vid.load(); vid.style.display="none"; }
+    if(stage) stage.classList.remove("playing-video");
   }
   document.querySelectorAll(".thumbs img").forEach(i=>i.classList.remove("active"));
   if(el) el.classList.add("active");
