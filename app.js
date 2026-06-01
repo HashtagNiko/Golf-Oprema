@@ -44,7 +44,34 @@ function swapMain(src, el){
   if(el) el.classList.add("active");
 }
 
+/* rotating quotes over video */
+function initQuotes(){
+  const box=document.getElementById("quoteBox");
+  const dotsWrap=document.getElementById("quoteDots");
+  if(!box) return;
+  const quotes=[...box.querySelectorAll(".quote")];
+  if(quotes.length<2){ return; }
+  let i=0, timer;
+  const dots=quotes.map((_,n)=>{
+    const b=document.createElement("button");
+    b.setAttribute("aria-label","Citat "+(n+1));
+    b.addEventListener("click",()=>show(n,true));
+    dotsWrap && dotsWrap.appendChild(b);
+    return b;
+  });
+  function show(n,manual){
+    quotes[i].classList.remove("active"); dots[i].classList.remove("active");
+    i=(n+quotes.length)%quotes.length;
+    quotes[i].classList.add("active"); dots[i].classList.add("active");
+    if(manual) restart();
+  }
+  function restart(){ clearInterval(timer); timer=setInterval(()=>show(i+1),6000); }
+  dots[0].classList.add("active");
+  restart();
+}
+
 document.addEventListener("DOMContentLoaded",()=>{
   const y=document.getElementById("year"); if(y) y.textContent=new Date().getFullYear();
   setLang("sr");
+  initQuotes();
 });
