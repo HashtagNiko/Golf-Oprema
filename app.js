@@ -31,7 +31,15 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("open"); 
 /* product gallery */
 function swapMain(src, el){
   const main=document.getElementById("mainImg");
-  if(main){ main.src=src; }
+  const vid=document.getElementById("mainVid");
+  const isVideo=/\.(mp4|webm|mov)$/i.test(src);
+  if(isVideo){
+    if(vid){ vid.src=src; vid.style.display="block"; vid.play().catch(()=>{}); }
+    if(main) main.style.display="none";
+  }else{
+    if(main){ main.src=src; main.style.display="block"; }
+    if(vid){ vid.pause(); vid.removeAttribute("src"); vid.load(); vid.style.display="none"; }
+  }
   document.querySelectorAll(".thumbs img").forEach(i=>i.classList.remove("active"));
   if(el) el.classList.add("active");
 }
