@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git init *)",
-      "Bash(git -c user.name=HausBlick -c user.email=info@hausblick-fn.de commit -m 'Initial commit: Golf-Oprema site *)"
-    ]
-  }
-}
