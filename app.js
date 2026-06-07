@@ -17,6 +17,7 @@ function buildLinks(lang){
 }
 
 function setLang(l){
+  try{ localStorage.setItem("lang", l); }catch(e){}
   document.documentElement.lang = l;
   const sr=document.getElementById("sr"), en=document.getElementById("en");
   if(sr&&en){ sr.classList.toggle("active",l==="sr"); en.classList.toggle("active",l==="en"); }
@@ -75,6 +76,7 @@ function initQuotes(){
 
 document.addEventListener("DOMContentLoaded",()=>{
   const y=document.getElementById("year"); if(y) y.textContent=new Date().getFullYear();
-  setLang("sr");
+  let saved="sr"; try{ saved=localStorage.getItem("lang")||"sr"; }catch(e){}
+  setLang(saved);
   initQuotes();
 });
