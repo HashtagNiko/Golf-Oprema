@@ -3,10 +3,10 @@ const PHONE = "381643288274";
 const EMAIL = "sportpoint@live.de";
 
 const MSG = {
-  sr:{ wa:"Zdravo, zanima me Golf Training trener za puttovanje. Možete li mi poslati cenu i dostupnost?",
-       sub:"Upit: Golf Training trener za puttovanje" },
-  en:{ wa:"Hello, I'm interested in the Golf Training putting trainer. Could you send me the price and availability?",
-       sub:"Inquiry: Golf Training putting trainer" }
+  sr:{ wa:"Zdravo, zanima me PerfectPutt trener za puttovanje (80 €). Da li je dostupan i kako mogu da poručim?",
+       sub:"Upit: PerfectPutt" },
+  en:{ wa:"Hello, I'm interested in the PerfectPutt putting trainer (€80). Is it available and how can I order?",
+       sub:"Inquiry: PerfectPutt" }
 };
 
 function buildLinks(lang){

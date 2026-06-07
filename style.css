@@ -118,6 +118,14 @@ section{padding:38px 0}
 .includes li::before{content:"";flex-shrink:0;width:19px;height:19px;margin-top:1px;background:var(--blue);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5 10 17.5 19 7'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5 10 17.5 19 7'/%3E%3C/svg%3E") center/contain no-repeat}
 @media(max-width:860px){.product{grid-template-columns:1fr;gap:30px}.gallery .main.playing-video{max-width:340px}}
 
+/* USP highlight */
+.usp{display:flex;gap:18px;align-items:flex-start;background:var(--blue-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-top:26px}
+.usp .usp-ico{flex-shrink:0;width:48px;height:48px;border-radius:13px;background:#fff;display:grid;place-items:center;color:var(--blue);box-shadow:var(--shadow-sm)}
+.usp .usp-ico svg{width:26px;height:26px}
+.usp h3{font-weight:800;font-size:19px;color:var(--ink);margin-bottom:6px}
+.usp p{color:var(--slate);font-size:15px}
+@media(max-width:480px){.usp{flex-direction:column;gap:14px}}
+
 /* About / Contact */
 .about{padding-top:46px;max-width:760px}
 .about h1{font-weight:800;font-size:clamp(32px,5vw,52px);color:var(--ink);line-height:1.05}
