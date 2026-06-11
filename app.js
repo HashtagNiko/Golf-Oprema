@@ -74,9 +74,59 @@ function initQuotes(){
   restart();
 }
 
+/* lightbox gallery (product page) */
+let lbImages=[], lbI=0;
+function lbRender(){
+  const img=document.getElementById("lbImg"), idx=document.getElementById("lbIndex");
+  if(img) img.src=lbImages[lbI];
+  if(idx) idx.textContent=lbI+1;
+}
+function lbOpen(i){
+  const box=document.getElementById("lightbox");
+  if(!box||!lbImages.length) return;
+  lbI=(i+lbImages.length)%lbImages.length;
+  lbRender();
+  box.classList.add("open"); box.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+}
+function lbStep(d){ if(lbImages.length){ lbI=(lbI+d+lbImages.length)%lbImages.length; lbRender(); } }
+function lbClose(){
+  const box=document.getElementById("lightbox");
+  if(!box) return;
+  box.classList.remove("open"); box.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+}
+function initLightbox(){
+  const box=document.getElementById("lightbox");
+  if(!box) return;
+  lbImages=[...document.querySelectorAll(".thumbs img:not(.thumb-video)")].map(t=>t.getAttribute("src"));
+  const total=document.getElementById("lbTotal"); if(total) total.textContent=lbImages.length;
+  const main=document.getElementById("mainImg");
+  if(main) main.addEventListener("click",()=>{
+    const i=lbImages.indexOf(main.getAttribute("src"));
+    lbOpen(i<0?0:i);
+  });
+  box.addEventListener("click",e=>{ if(e.target===box) lbClose(); });
+  document.addEventListener("keydown",e=>{
+    if(!box.classList.contains("open")) return;
+    if(e.key==="Escape") lbClose();
+    else if(e.key==="ArrowLeft") lbStep(-1);
+    else if(e.key==="ArrowRight") lbStep(1);
+  });
+  let x0=null;
+  box.addEventListener("touchstart",e=>{ x0=e.touches[0].clientX; },{passive:true});
+  box.addEventListener("touchend",e=>{
+    if(x0===null) return;
+    const dx=e.changedTouches[0].clientX-x0;
+    if(Math.abs(dx)>40) lbStep(dx<0?1:-1);
+    x0=null;
+  },{passive:true});
+}
+
 document.addEventListener("DOMContentLoaded",()=>{
   const y=document.getElementById("year"); if(y) y.textContent=new Date().getFullYear();
   let saved="sr"; try{ saved=localStorage.getItem("lang")||"sr"; }catch(e){}
   setLang(saved);
   initQuotes();
+  initLightbox();
 });

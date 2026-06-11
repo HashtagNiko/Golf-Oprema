@@ -79,6 +79,14 @@
   </div>
 </section>
 
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Zatvori / Close" onclick="lbClose()">&times;</button>
+  <button class="lb-nav lb-prev" aria-label="Prethodna / Previous" onclick="lbStep(-1)">&#8249;</button>
+  <figure class="lb-stage"><img id="lbImg" src="" alt="PerfectPutt"></figure>
+  <button class="lb-nav lb-next" aria-label="Sledeća / Next" onclick="lbStep(1)">&#8250;</button>
+  <div class="lb-count"><span id="lbIndex">1</span> / <span id="lbTotal">5</span></div>
+</div>
+
 <footer>
   <div class="wrap foot">
     <div class="foot-brand">
